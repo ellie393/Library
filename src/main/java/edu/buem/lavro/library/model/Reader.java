@@ -4,30 +4,39 @@ package edu.buem.lavro.library.model;
 import java.util.Objects;
 
 public class Reader {
-    private String ReaderID;
+    private String readerID;
     private String firstName;
     private String middleName;
     private String lastName;
-    private String Address;
-    private String TelephoneNumber;
-
+    private String address;
+    private String telephoneNumber;
+    private int amountOfDiscount;
     public Reader() {
     }
 
-    public Reader(String firstName, String middleName, String lastName, String address, String telephoneNumber) {
+    public Reader(String firstName, String middleName, String lastName, String address, String telephoneNumber, int amountOfDiscount) {
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
-        Address = address;
-        TelephoneNumber = telephoneNumber;
+        this.address = address;
+        this.telephoneNumber = telephoneNumber;
+        this.amountOfDiscount = amountOfDiscount;
+    }
+
+    public int getAmountOfDiscount() {
+        return amountOfDiscount;
+    }
+
+    public void setAmountOfDiscount(int amountOfDiscount) {
+        this.amountOfDiscount = amountOfDiscount;
     }
 
     public String getReaderID() {
-        return ReaderID;
+        return readerID;
     }
 
     public void setReaderID(String readerID) {
-        ReaderID = readerID;
+        this.readerID = readerID;
     }
 
     public String getFirstName() {
@@ -55,19 +64,19 @@ public class Reader {
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 
     public String getTelephoneNumber() {
-        return TelephoneNumber;
+        return telephoneNumber;
     }
 
     public void setTelephoneNumber(String telephoneNumber) {
-        TelephoneNumber = telephoneNumber;
+        this.telephoneNumber = telephoneNumber;
     }
 
     @Override
@@ -75,23 +84,23 @@ public class Reader {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Reader reader = (Reader) o;
-        return ReaderID.equals(reader.ReaderID);
+        return readerID.equals(reader.readerID);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(ReaderID);
+        return Objects.hash(readerID);
     }
 
     @Override
     public String toString() {
         return "Reader{" +
-                "ReaderID='" + ReaderID + '\'' +
+                "ReaderID='" + readerID + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", middleName='" + middleName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", Address='" + Address + '\'' +
-                ", TelephoneNumber='" + TelephoneNumber + '\'' +
+                ", Address='" + address + '\'' +
+                ", TelephoneNumber='" + telephoneNumber + '\'' +
                 '}';
     }
 }
