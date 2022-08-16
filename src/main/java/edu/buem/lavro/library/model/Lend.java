@@ -2,9 +2,9 @@ package edu.buem.lavro.library.model;
 
 import java.time.LocalDate;
 
-public class IssuedBooks {
-    private String BookID;
-    private String ReaderID;
+public class Lend {
+    private Book book;
+    private Reader reader;
     private LocalDate IssuedDate;
     private LocalDate expectedReturnDate;
     private int amountOfDiscount;
@@ -12,12 +12,13 @@ public class IssuedBooks {
     private LocalDate ActualReturnDate;
     private int finalSum;
 
-    public IssuedBooks() {
+
+    public Lend() {
     }
 
-    public IssuedBooks(String bookID, String readerID, LocalDate issuedDate, LocalDate expectedReturnDate, int amountOfDiscount, int amountOfFine, LocalDate actualReturnDate, int finalSum) {
-        BookID = bookID;
-        ReaderID = readerID;
+    public Lend(Book book, Reader reader, LocalDate issuedDate, LocalDate expectedReturnDate, int amountOfDiscount, int amountOfFine, LocalDate actualReturnDate, int finalSum) {
+        this.book = book;
+        this.reader = reader;
         IssuedDate = issuedDate;
         this.expectedReturnDate = expectedReturnDate;
         this.amountOfDiscount = amountOfDiscount;
@@ -26,20 +27,20 @@ public class IssuedBooks {
         this.finalSum = finalSum;
     }
 
-    public String getBookID() {
-        return BookID;
+    public Book getBook() {
+        return book;
     }
 
-    public void setBookID(String bookID) {
-        BookID = bookID;
+    public void setBook(Book book) {
+        this.book = book;
     }
 
-    public String getReaderID() {
-        return ReaderID;
+    public Reader getReader() {
+        return reader;
     }
 
-    public void setReaderID(String readerID) {
-        ReaderID = readerID;
+    public void setReader(Reader reader) {
+        this.reader = reader;
     }
 
     public LocalDate getIssuedDate() {
@@ -89,5 +90,4 @@ public class IssuedBooks {
     public void setFinalSum(int finalSum) {
         this.finalSum = finalSum;
     }
-
 }

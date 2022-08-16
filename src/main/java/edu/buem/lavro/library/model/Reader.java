@@ -10,26 +10,18 @@ public class Reader {
     private String lastName;
     private String address;
     private String telephoneNumber;
-    private int amountOfDiscount;
     public Reader() {
     }
 
-    public Reader(String firstName, String middleName, String lastName, String address, String telephoneNumber, int amountOfDiscount) {
+    public Reader(String id,String firstName, String middleName, String lastName, String address, String telephoneNumber) {
+        this.readerID = id;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
         this.address = address;
         this.telephoneNumber = telephoneNumber;
-        this.amountOfDiscount = amountOfDiscount;
     }
 
-    public int getAmountOfDiscount() {
-        return amountOfDiscount;
-    }
-
-    public void setAmountOfDiscount(int amountOfDiscount) {
-        this.amountOfDiscount = amountOfDiscount;
-    }
 
     public String getReaderID() {
         return readerID;

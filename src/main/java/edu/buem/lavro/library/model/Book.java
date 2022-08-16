@@ -9,7 +9,7 @@ public class Book {
     private String author;
     private int collateralValue;
     private int rentalPrice;
-    private Enum<Genres> genres;
+    private Genres genres;
     private int midTermOfReading;
 
     public Book() {
@@ -67,11 +67,12 @@ public class Book {
         return genres;
     }
 
-    public void setGenres(Enum<Genres> genres) {
+    public void setGenres(Genres genres) {
         this.genres = genres;
     }
 
-    public Book(String title, String author, int collateralValue, int rentalPrice, Enum<Genres> genres, int midTermOfReading) {
+    public Book(String id,String title, String author, int collateralValue, int rentalPrice, Genres genres, int midTermOfReading) {
+        this.bookID = id;
         this.title = title;
         this.author = author;
         this.collateralValue = collateralValue;
