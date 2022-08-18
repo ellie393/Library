@@ -11,6 +11,7 @@ import java.util.UUID;
 
 @Repository
 public class BookFakeRepos {
+
     private List<Book> bookList = new ArrayList<>(
             Arrays.asList(
                     new Book("1","In Search of Lost Time", "Marcel Proust", 200, 100, Genres.Biography, 60),
