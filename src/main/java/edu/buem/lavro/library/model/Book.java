@@ -1,9 +1,14 @@
 package edu.buem.lavro.library.model;
 
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import javax.persistence.Id;
 import java.util.Objects;
 
+@Document
 public class Book {
+    @Id
     private String bookID;
     private String title;
     private String author;
