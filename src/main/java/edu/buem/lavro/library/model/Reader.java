@@ -1,9 +1,14 @@
 package edu.buem.lavro.library.model;
 
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.Objects;
 
+@Document
 public class Reader {
+    @Id
     private String readerID;
     private String firstName;
     private String middleName;

@@ -1,27 +1,24 @@
 package edu.buem.lavro.library.model;
 
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.Objects;
 
+@Document
 public class Book {
+    @Id
     private String bookID;
     private String title;
     private String author;
     private int collateralValue;
     private int rentalPrice;
     private Genres genres;
-    private int midTermOfReading;
 
     public Book() {
     }
 
-    public int getMidTermOfReading() {
-        return midTermOfReading;
-    }
-
-    public void setMidTermOfReading(int midTermOfReading) {
-        this.midTermOfReading = midTermOfReading;
-    }
 
     public String getBookID() {
         return bookID;
@@ -71,14 +68,13 @@ public class Book {
         this.genres = genres;
     }
 
-    public Book(String id,String title, String author, int collateralValue, int rentalPrice, Genres genres, int midTermOfReading) {
+    public Book(String id, String title, String author, int collateralValue, int rentalPrice, Genres genres) {
         this.bookID = id;
         this.title = title;
         this.author = author;
         this.collateralValue = collateralValue;
         this.rentalPrice = rentalPrice;
         this.genres = genres;
-        this.midTermOfReading = midTermOfReading;
     }
 
     @Override
@@ -102,8 +98,6 @@ public class Book {
                 ", author='" + author + '\'' +
                 ", collateralValue=" + collateralValue +
                 ", rentalPrice=" + rentalPrice +
-                ", genres=" + genres +
-                ", midTermOfReading=" + midTermOfReading +
-                '}';
+                ", genres=" + genres;
     }
 }

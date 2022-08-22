@@ -1,13 +1,11 @@
-package edu.buem.lavro.library.model;
+package edu.buem.lavro.library.form;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import edu.buem.lavro.library.model.Book;
+import edu.buem.lavro.library.model.Reader;
 
 import java.time.LocalDate;
 
-@Document
-public class Lend {
-    @Id
+public class LendForm {
     private Book book;
     private Reader reader;
     private LocalDate IssuedDate;
@@ -17,11 +15,10 @@ public class Lend {
     private LocalDate ActualReturnDate;
     private int finalSum;
 
-
-    public Lend() {
+    public LendForm() {
     }
 
-    public Lend(Book book, Reader reader, LocalDate issuedDate, LocalDate expectedReturnDate, int amountOfDiscount, int amountOfFine, LocalDate actualReturnDate, int finalSum) {
+    public LendForm(Book book, Reader reader, LocalDate issuedDate, LocalDate expectedReturnDate, int amountOfDiscount, int amountOfFine, LocalDate actualReturnDate, int finalSum) {
         this.book = book;
         this.reader = reader;
         IssuedDate = issuedDate;
