@@ -36,7 +36,7 @@ public class BookUIController {
     public String create(Model model) {
         BookForm bookForm = new BookForm();
         model.addAttribute("form", bookForm);
-        return "addBook";
+        return "addBooks";
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
