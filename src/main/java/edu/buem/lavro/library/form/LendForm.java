@@ -92,4 +92,18 @@ public class LendForm {
     public void setFinalSum(int finalSum) {
         this.finalSum = finalSum;
     }
+
+    @Override
+    public String toString() {
+        return "LendForm{" +
+                "book=" + book +
+                ", reader=" + reader +
+                ", IssuedDate=" + IssuedDate +
+                ", expectedReturnDate=" + expectedReturnDate +
+                ", amountOfDiscount=" + amountOfDiscount +
+                ", amountOfFine=" + amountOfFine +
+                ", ActualReturnDate=" + ActualReturnDate +
+                ", finalSum=" + finalSum +
+                '}';
+    }
 }
