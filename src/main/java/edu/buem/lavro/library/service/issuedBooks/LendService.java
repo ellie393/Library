@@ -7,7 +7,7 @@ import java.util.List;
 public interface LendService {
     Lend addNewIssue(Lend lend);
     Lend updateIssue(Lend lend);
-    Lend deleteIssue(String id);
+    void deleteIssue(String id);
     Lend getIssue(String id);
     List<Lend> getAll();
 }
