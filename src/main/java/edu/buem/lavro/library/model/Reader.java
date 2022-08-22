@@ -7,21 +7,31 @@ public class Reader {
     private String readerID;
     private String firstName;
     private String middleName;
+    private ReaderTypes readerTypes;
     private String lastName;
     private String address;
     private String telephoneNumber;
+
     public Reader() {
     }
 
-    public Reader(String id,String firstName, String middleName, String lastName, String address, String telephoneNumber) {
-        this.readerID = id;
+    public Reader(String readerID, String firstName, String middleName, ReaderTypes readerTypes, String lastName, String address, String telephoneNumber) {
+        this.readerID = readerID;
         this.firstName = firstName;
         this.middleName = middleName;
+        this.readerTypes = readerTypes;
         this.lastName = lastName;
         this.address = address;
         this.telephoneNumber = telephoneNumber;
     }
 
+    public ReaderTypes getReaderTypes() {
+        return readerTypes;
+    }
+
+    public void setReaderTypes(ReaderTypes readerTypes) {
+        this.readerTypes = readerTypes;
+    }
 
     public String getReaderID() {
         return readerID;
