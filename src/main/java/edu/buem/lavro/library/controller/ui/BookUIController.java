@@ -39,9 +39,44 @@ public class BookUIController {
         return "addBook";
     }
 
-    @PutMapping()
-    public Book update(@RequestBody Book book) {
-        return bookService.update(book);
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    public String create(@ModelAttribute("form") BookForm form) {
+        Book book = new Book();
+        book.setTitle(form.getTitle());
+        book.setAuthor(form.getAuthor());
+        book.setGenres(form.getGenres());
+        book.setRentalPrice(form.getRentalPrice());
+        book.setCollateralValue(form.getCollateralValue());
+        bookService.add(book);
+        return "redirect:/ui/books/";
+    }
+
+    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
+    public String update(Model model, @PathVariable("id") String id) {
+        Book bookToUpdate = bookService.get(id);
+        BookForm bookForm = new BookForm();
+        bookForm.setBookID(bookToUpdate.getBookID());
+        bookForm.setTitle(bookToUpdate.getTitle());
+        bookForm.setAuthor(bookToUpdate.getAuthor());
+        bookForm.setGenres(bookToUpdate.getGenres());
+        bookForm.setCollateralValue(bookToUpdate.getCollateralValue());
+        bookForm.setRentalPrice(bookToUpdate.getRentalPrice());
+        model.addAttribute("form", bookForm);
+        return "updateBook";
+    }
+
+    public String update(@ModelAttribute("form") BookForm form) {
+        System.out.println(form);
+        Book bookToUpdate = new Book();
+        bookToUpdate.setBookID(form.getBookID());
+        bookToUpdate.setTitle(form.getTitle());
+        bookToUpdate.setAuthor(form.getAuthor());
+        bookToUpdate.setGenres(form.getGenres());
+        bookToUpdate.setRentalPrice(form.getRentalPrice());
+        bookToUpdate.setCollateralValue(form.getCollateralValue());
+
+        bookService.update(bookToUpdate);
+        return "redirect:/ui/books/";
     }
 
 

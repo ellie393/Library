@@ -60,7 +60,7 @@ public class Book {
         this.rentalPrice = rentalPrice;
     }
 
-    public Enum<Genres> getGenres() {
+    public Genres getGenres() {
         return genres;
     }
 
