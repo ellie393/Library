@@ -29,12 +29,12 @@
                     <td>${book.collateralValue}</td>
                     <td>${book.rentalPrice}</td>
                     <td>${book.genres}</td>
-                    <td>
-                        <button type="button" class="btn btn-danger">Delete</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-info">Edit</button>
-                    </td>
+                    <td><a href="http://localhost:8080/ui/books/delete/${book.bookID}">
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </a></td>
+                    <td><a href="http://localhost:8080/ui/books/edit/${book.bookID}">
+                            <button type="button" class="btn btn-info">Edit</button>
+                        </a></td>
                 </tr>
             </#list>
 

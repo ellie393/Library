@@ -64,7 +64,7 @@
             <div class="text-center text-danger mb-3">Error sending message!</div>
         </div>
         <div class="d-grid">
-            <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit" value="Save">Submit</button>
+            <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit" value="Create">Submit</button>
         </div>
     </form>
 </div>
