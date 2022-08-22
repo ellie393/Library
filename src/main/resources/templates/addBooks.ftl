@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="container px-5 my-5">
-    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+    <form id="contactForm" data-sb-form-api-token="API_TOKEN" name="book" action="" method="POST">
         <div class="mb-3">
             <label class="form-label" for="title">Title</label>
             <input class="form-control" id="title" type="text" placeholder="Title" data-sb-validations="required"/>
@@ -64,7 +64,7 @@
             <div class="text-center text-danger mb-3">Error sending message!</div>
         </div>
         <div class="d-grid">
-            <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+            <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit" value="Save">Submit</button>
         </div>
     </form>
 </div>
