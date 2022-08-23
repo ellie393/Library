@@ -2,7 +2,9 @@ package edu.buem.lavro.library.controller.ui;
 
 import edu.buem.lavro.library.form.BookForm;
 import edu.buem.lavro.library.model.Book;
+import edu.buem.lavro.library.model.Genres;
 import edu.buem.lavro.library.service.book.impl.BookServiceImpl;
+import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,7 +31,7 @@ public class BookUIController {
     @GetMapping("/delete/{id}")
     public String deleteBook(@PathVariable("id") String id) {
         bookService.delete(id);
-        return "redirect:/ui/books/";//можливо треба буде просто замінити на сторінку з книжками(треба подивтися чи так буде відображатись кнопки повернення, і т.д)
+        return "redirect:/ui/books/";
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
@@ -61,7 +63,9 @@ public class BookUIController {
         bookForm.setGenres(bookToUpdate.getGenres());
         bookForm.setCollateralValue(bookToUpdate.getCollateralValue());
         bookForm.setRentalPrice(bookToUpdate.getRentalPrice());
+        var genres = Genres.values();
         model.addAttribute("form", bookForm);
+        model.addAttribute("genres", genres);
         return "updateBook";
     }
 

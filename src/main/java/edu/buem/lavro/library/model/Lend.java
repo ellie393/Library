@@ -15,13 +15,14 @@ public class Lend {
     private int amountOfDiscount;
     private int amountOfFine;
     private LocalDate ActualReturnDate;
+    private boolean isOvertimedOrDamaged = false;
     private int finalSum;
 
 
     public Lend() {
     }
 
-    public Lend(Book book, Reader reader, LocalDate issuedDate, LocalDate expectedReturnDate, int amountOfDiscount, int amountOfFine, LocalDate actualReturnDate, int finalSum) {
+    public Lend(Book book, Reader reader, LocalDate issuedDate, LocalDate expectedReturnDate, int amountOfDiscount, int amountOfFine, LocalDate actualReturnDate, boolean isOvertimedOrDamaged, int finalSum) {
         this.book = book;
         this.reader = reader;
         IssuedDate = issuedDate;
@@ -29,7 +30,16 @@ public class Lend {
         this.amountOfDiscount = amountOfDiscount;
         this.amountOfFine = amountOfFine;
         ActualReturnDate = actualReturnDate;
+        this.isOvertimedOrDamaged = isOvertimedOrDamaged;
         this.finalSum = finalSum;
+    }
+
+    public boolean isOvertimedOrDamaged() {
+        return isOvertimedOrDamaged;
+    }
+
+    public void setOvertimedOrDamaged(boolean overtimedOrDamaged) {
+        isOvertimedOrDamaged = overtimedOrDamaged;
     }
 
     public Book getBook() {

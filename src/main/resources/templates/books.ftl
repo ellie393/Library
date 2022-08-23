@@ -3,13 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <title>List of books</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            /*background-image: url(main/library.jpg);*/
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #dab3ff;
+            background-position: center;
+        }
+
+        h1 {
+
+            font-family: 'DynaPuff', cursive;
+            color: #660066;
+            font-size: 3em;
+            text-align: center;
+            /*float: center;*/
+            margin-bottom: 30px;
+
+        }
+
+        .mainmenu {
+            position: fixed;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            left: 0;
+            padding-left: 0;
+
+        }
+
+        .mainmenu a {
+            display: block;
+            text-align: center;
+            padding: 16px;
+            transition: all 0.3s ease;
+            color: #730099;
+            font-size: 40px;
+
+        }
+
+        .mainmenu li:hover {
+            background-color: #dab3ff;
+        }
+
+        /*Подсветка активной вкладки меню*/
+        .icon {
+            background-color: white;
+        }
+
+        body {
+            margin-left: 80px;
+            margin-top: 10px;
+            padding: 10px;
+
+        }
+
+        table {
+            background-color: #ce99ff;
+            font-family: 'DynaPuff', cursive;
+            font-size: medium;
+        }
+
+        .create {
+
+        }
+
+        th, td {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .icons {
+            /*background-color: #dab3ff;*/
+        }
+
+
+    </style>
 </head>
 <body>
+<ul class="mainmenu">
+    <li><a href="main.html" title="Main"><i class="fa fa-home"></i></a></li>
+    <li class="icon"><a href="history.html" title="Books"><i class="fa fa-book"></i></a></li>
+    <li><a href="members.html" title="Readers"><i class="fa fa-users"></i></a></li>
+    <li><a href="albums.html" title="Lends"><i class="fa fa-plus-square"></i></a></li>
+</ul>
+
+<h1 class="display-4">List of our Magic Books <i class="fa fa-magic" aria-hidden="true"></i></h1>
 <div class="table-center">
-    <div class="table-center" style="width: 80%; display: flex; align-content: center">
-        <table class="table table-dark table-striped">
+    <div>
+        <table class="table table-hover">
             <thead>
             <th> ID</th>
             <th> Title</th>
@@ -17,8 +108,8 @@
             <th> Deposit</th>
             <th> Price</th>
             <th> Genre</th>
-            <th></th>
-            <th></th>
+            <#--            <th></th>-->
+            <#--            <th></th>-->
             </thead>
             <tbody
             <#list books as book >
@@ -29,20 +120,18 @@
                     <td>${book.collateralValue}</td>
                     <td>${book.rentalPrice}</td>
                     <td>${book.genres}</td>
-                    <td><a href="http://localhost:8080/ui/books/delete/${book.bookID}">
-                            <button type="button" class="btn btn-danger">Delete</button>
+                    <td style="clear: right"><a class="icons" href="/ui/books/delete/${book.bookID}" title="Delete"><i
+                                    class="fa fa-trash fa-2x"></i>
                         </a></td>
-                    <td><a href="http://localhost:8080/ui/books/edit/${book.bookID}">
-                            <button type="button" class="btn btn-info">Edit</button>
+                    <td><a href="/ui/books/edit/${book.bookID}" title="Edit">
+                            <i class="fa fa-pencil fa-2x" aria-hidden="true"></i>
                         </a></td>
                 </tr>
             </#list>
-
-
         </table>
     </div>
 </div>
 
-<a href="http://localhost:8080/ui/books/add">CREATE</a>
+<a href="http://localhost:8080/ui/books/add" class="create">CREATE</a>
 </body>
 </html>

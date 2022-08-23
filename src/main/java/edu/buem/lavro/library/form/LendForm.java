@@ -13,12 +13,13 @@ public class LendForm {
     private int amountOfDiscount;
     private int amountOfFine;
     private LocalDate ActualReturnDate;
+    private boolean isOverOrDamaged;
     private int finalSum;
 
     public LendForm() {
     }
 
-    public LendForm(Book book, Reader reader, LocalDate issuedDate, LocalDate expectedReturnDate, int amountOfDiscount, int amountOfFine, LocalDate actualReturnDate, int finalSum) {
+    public LendForm(Book book, Reader reader, LocalDate issuedDate, LocalDate expectedReturnDate, int amountOfDiscount, int amountOfFine, LocalDate actualReturnDate, boolean isOverOrDamaged, int finalSum) {
         this.book = book;
         this.reader = reader;
         IssuedDate = issuedDate;
@@ -26,7 +27,16 @@ public class LendForm {
         this.amountOfDiscount = amountOfDiscount;
         this.amountOfFine = amountOfFine;
         ActualReturnDate = actualReturnDate;
+        this.isOverOrDamaged = isOverOrDamaged;
         this.finalSum = finalSum;
+    }
+
+    public boolean isOverOrDamaged() {
+        return isOverOrDamaged;
+    }
+
+    public void setOverOrDamaged(boolean overOrDamaged) {
+        isOverOrDamaged = overOrDamaged;
     }
 
     public Book getBook() {

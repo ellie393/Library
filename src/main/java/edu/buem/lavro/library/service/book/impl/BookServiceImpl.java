@@ -39,4 +39,8 @@ public class BookServiceImpl implements BookService {
     public List<Book> seeAll() {
         return repository.findAll();
     }
+
+    public List<Book> saveAll(List<Book> books) {
+        return repository.saveAll(books);
+    }
 }

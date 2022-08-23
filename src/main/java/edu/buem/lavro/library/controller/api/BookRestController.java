@@ -38,5 +38,8 @@ public class BookRestController {
         return bookService.update(book);
     }
 
-
+//    @PostMapping("")
+//    public List<Book> saveAll(List<Book> books) {
+//        return bookService.saveAll(books);
+//    }
 }
