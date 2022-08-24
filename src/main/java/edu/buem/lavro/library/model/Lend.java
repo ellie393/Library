@@ -8,12 +8,12 @@ import java.time.LocalDate;
 @Document
 public class Lend {
     @Id
+    private String id;
     private Book book;
     private Reader reader;
     private LocalDate IssuedDate;
     private LocalDate expectedReturnDate;
     private int amountOfDiscount;
-    private int amountOfFine;
     private LocalDate ActualReturnDate;
     private boolean isOvertimedOrDamaged = false;
     private int finalSum;
@@ -22,16 +22,24 @@ public class Lend {
     public Lend() {
     }
 
-    public Lend(Book book, Reader reader, LocalDate issuedDate, LocalDate expectedReturnDate, int amountOfDiscount, int amountOfFine, LocalDate actualReturnDate, boolean isOvertimedOrDamaged, int finalSum) {
+    public Lend(String id, Book book, Reader reader, LocalDate issuedDate, LocalDate expectedReturnDate, int amountOfDiscount, LocalDate actualReturnDate, boolean isOvertimedOrDamaged, int finalSum) {
+        this.id = id;
         this.book = book;
         this.reader = reader;
         IssuedDate = issuedDate;
         this.expectedReturnDate = expectedReturnDate;
         this.amountOfDiscount = amountOfDiscount;
-        this.amountOfFine = amountOfFine;
         ActualReturnDate = actualReturnDate;
         this.isOvertimedOrDamaged = isOvertimedOrDamaged;
         this.finalSum = finalSum;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public boolean isOvertimedOrDamaged() {
@@ -82,13 +90,6 @@ public class Lend {
         this.amountOfDiscount = amountOfDiscount;
     }
 
-    public int getAmountOfFine() {
-        return amountOfFine;
-    }
-
-    public void setAmountOfFine(int amountOfFine) {
-        this.amountOfFine = amountOfFine;
-    }
 
     public LocalDate getActualReturnDate() {
         return ActualReturnDate;

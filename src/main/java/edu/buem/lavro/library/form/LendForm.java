@@ -6,29 +6,37 @@ import edu.buem.lavro.library.model.Reader;
 import java.time.LocalDate;
 
 public class LendForm {
+    private String id;
     private Book book;
     private Reader reader;
-    private LocalDate IssuedDate;
+    private LocalDate issuedDate;
     private LocalDate expectedReturnDate;
     private int amountOfDiscount;
-    private int amountOfFine;
-    private LocalDate ActualReturnDate;
+    private LocalDate actualReturnDate;
     private boolean isOverOrDamaged;
     private int finalSum;
 
     public LendForm() {
     }
 
-    public LendForm(Book book, Reader reader, LocalDate issuedDate, LocalDate expectedReturnDate, int amountOfDiscount, int amountOfFine, LocalDate actualReturnDate, boolean isOverOrDamaged, int finalSum) {
+    public LendForm(String id, Book book, Reader reader, LocalDate issuedDate, LocalDate expectedReturnDate, int amountOfDiscount, LocalDate actualReturnDate, boolean isOverOrDamaged, int finalSum) {
+        this.id = id;
         this.book = book;
         this.reader = reader;
-        IssuedDate = issuedDate;
+        this.issuedDate = issuedDate;
         this.expectedReturnDate = expectedReturnDate;
         this.amountOfDiscount = amountOfDiscount;
-        this.amountOfFine = amountOfFine;
-        ActualReturnDate = actualReturnDate;
+        this.actualReturnDate = actualReturnDate;
         this.isOverOrDamaged = isOverOrDamaged;
         this.finalSum = finalSum;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public boolean isOverOrDamaged() {
@@ -56,11 +64,11 @@ public class LendForm {
     }
 
     public LocalDate getIssuedDate() {
-        return IssuedDate;
+        return issuedDate;
     }
 
     public void setIssuedDate(LocalDate issuedDate) {
-        IssuedDate = issuedDate;
+        this.issuedDate = issuedDate;
     }
 
     public LocalDate getExpectedReturnDate() {
@@ -79,20 +87,13 @@ public class LendForm {
         this.amountOfDiscount = amountOfDiscount;
     }
 
-    public int getAmountOfFine() {
-        return amountOfFine;
-    }
-
-    public void setAmountOfFine(int amountOfFine) {
-        this.amountOfFine = amountOfFine;
-    }
 
     public LocalDate getActualReturnDate() {
-        return ActualReturnDate;
+        return actualReturnDate;
     }
 
     public void setActualReturnDate(LocalDate actualReturnDate) {
-        ActualReturnDate = actualReturnDate;
+        this.actualReturnDate = actualReturnDate;
     }
 
     public int getFinalSum() {
@@ -108,11 +109,10 @@ public class LendForm {
         return "LendForm{" +
                 "book=" + book +
                 ", reader=" + reader +
-                ", IssuedDate=" + IssuedDate +
+                ", IssuedDate=" + issuedDate +
                 ", expectedReturnDate=" + expectedReturnDate +
                 ", amountOfDiscount=" + amountOfDiscount +
-                ", amountOfFine=" + amountOfFine +
-                ", ActualReturnDate=" + ActualReturnDate +
+                ", ActualReturnDate=" + actualReturnDate +
                 ", finalSum=" + finalSum +
                 '}';
     }
