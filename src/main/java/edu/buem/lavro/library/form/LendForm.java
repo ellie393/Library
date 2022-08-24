@@ -1,25 +1,20 @@
 package edu.buem.lavro.library.form;
 
-import edu.buem.lavro.library.model.Book;
-import edu.buem.lavro.library.model.Reader;
-
-import java.time.LocalDate;
-
 public class LendForm {
     private String id;
-    private Book book;
-    private Reader reader;
-    private LocalDate issuedDate;
-    private LocalDate expectedReturnDate;
+    private String book;
+    private String reader;
+    private String issuedDate;
+    private String expectedReturnDate;
     private int amountOfDiscount;
-    private LocalDate actualReturnDate;
-    private boolean isOverOrDamaged;
+    private String actualReturnDate;
+    private String isOvertimedOrDamaged;
     private int finalSum;
 
     public LendForm() {
     }
 
-    public LendForm(String id, Book book, Reader reader, LocalDate issuedDate, LocalDate expectedReturnDate, int amountOfDiscount, LocalDate actualReturnDate, boolean isOverOrDamaged, int finalSum) {
+    public LendForm(String id, String book, String reader, String issuedDate, String expectedReturnDate, int amountOfDiscount, String actualReturnDate, String isOverOrDamaged, int finalSum) {
         this.id = id;
         this.book = book;
         this.reader = reader;
@@ -27,7 +22,7 @@ public class LendForm {
         this.expectedReturnDate = expectedReturnDate;
         this.amountOfDiscount = amountOfDiscount;
         this.actualReturnDate = actualReturnDate;
-        this.isOverOrDamaged = isOverOrDamaged;
+        this.isOvertimedOrDamaged = isOverOrDamaged;
         this.finalSum = finalSum;
     }
 
@@ -39,43 +34,43 @@ public class LendForm {
         this.id = id;
     }
 
-    public boolean isOverOrDamaged() {
-        return isOverOrDamaged;
+    public String getIsOvertimedOrDamaged() {
+        return isOvertimedOrDamaged;
     }
 
-    public void setOverOrDamaged(boolean overOrDamaged) {
-        isOverOrDamaged = overOrDamaged;
+    public void setIsOvertimedOrDamaged(String isOvertimedOrDamaged) {
+        this.isOvertimedOrDamaged = isOvertimedOrDamaged;
     }
 
-    public Book getBook() {
+    public String getBook() {
         return book;
     }
 
-    public void setBook(Book book) {
+    public void setBook(String book) {
         this.book = book;
     }
 
-    public Reader getReader() {
+    public String getReader() {
         return reader;
     }
 
-    public void setReader(Reader reader) {
+    public void setReader(String reader) {
         this.reader = reader;
     }
 
-    public LocalDate getIssuedDate() {
+    public String getIssuedDate() {
         return issuedDate;
     }
 
-    public void setIssuedDate(LocalDate issuedDate) {
+    public void setIssuedDate(String issuedDate) {
         this.issuedDate = issuedDate;
     }
 
-    public LocalDate getExpectedReturnDate() {
+    public String getExpectedReturnDate() {
         return expectedReturnDate;
     }
 
-    public void setExpectedReturnDate(LocalDate expectedReturnDate) {
+    public void setExpectedReturnDate(String expectedReturnDate) {
         this.expectedReturnDate = expectedReturnDate;
     }
 
@@ -88,11 +83,11 @@ public class LendForm {
     }
 
 
-    public LocalDate getActualReturnDate() {
+    public String getActualReturnDate() {
         return actualReturnDate;
     }
 
-    public void setActualReturnDate(LocalDate actualReturnDate) {
+    public void setActualReturnDate(String actualReturnDate) {
         this.actualReturnDate = actualReturnDate;
     }
 

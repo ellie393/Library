@@ -15,14 +15,6 @@ public class ReaderServiceImpl implements ReaderService {
     @Autowired
     ReaderMongoRep repository;
 
-//    private List<Reader> readers = new ArrayList<>(
-//            Arrays.asList(
-//                    new Reader("1", "Olena", "Yuriivna", "Lavro","Hlinicka 1, Bratislava", "+380963563289"),
-//                    new Reader("2", "Daria", "Ivaniivna", "Ivanienko","Donetsk, Ukraine", "+380963563281"),
-//                    new Reader("3", "Anastasiia", "Vitalievna", "Litvinets","Kharkiv, Ukraine", "+380963563289"),
-//                    new Reader("4", "Evgenia", "Romanivna", "Logvinovich","Kharkiv, Ukraine", "+380963563229")
-//            )
-//    );
     @Override
     public Reader add(Reader reader) {
         return repository.save(reader);

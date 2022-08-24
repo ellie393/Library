@@ -3,26 +3,24 @@ package edu.buem.lavro.library.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.LocalDate;
-
 @Document
 public class Lend {
     @Id
     private String id;
-    private Book book;
-    private Reader reader;
-    private LocalDate IssuedDate;
-    private LocalDate expectedReturnDate;
+    private String book;
+    private String reader;
+    private String IssuedDate;
+    private String expectedReturnDate;
     private int amountOfDiscount;
-    private LocalDate ActualReturnDate;
-    private boolean isOvertimedOrDamaged = false;
+    private String ActualReturnDate;
+    private String isOvertimedOrDamaged;
     private int finalSum;
 
 
     public Lend() {
     }
 
-    public Lend(String id, Book book, Reader reader, LocalDate issuedDate, LocalDate expectedReturnDate, int amountOfDiscount, LocalDate actualReturnDate, boolean isOvertimedOrDamaged, int finalSum) {
+    public Lend(String id, String book, String reader, String issuedDate, String expectedReturnDate, int amountOfDiscount, String actualReturnDate, String isOvertimedOrDamaged, int finalSum) {
         this.id = id;
         this.book = book;
         this.reader = reader;
@@ -42,43 +40,43 @@ public class Lend {
         this.id = id;
     }
 
-    public boolean isOvertimedOrDamaged() {
+    public String isOvertimedOrDamaged() {
         return isOvertimedOrDamaged;
     }
 
-    public void setOvertimedOrDamaged(boolean overtimedOrDamaged) {
-        isOvertimedOrDamaged = overtimedOrDamaged;
+    public void setOvertimedOrDamaged(String overtimedOrDamaged) {
+        this.isOvertimedOrDamaged = overtimedOrDamaged;
     }
 
-    public Book getBook() {
+    public String getBook() {
         return book;
     }
 
-    public void setBook(Book book) {
+    public void setBook(String book) {
         this.book = book;
     }
 
-    public Reader getReader() {
+    public String getReader() {
         return reader;
     }
 
-    public void setReader(Reader reader) {
+    public void setReader(String reader) {
         this.reader = reader;
     }
 
-    public LocalDate getIssuedDate() {
+    public String getIssuedDate() {
         return IssuedDate;
     }
 
-    public void setIssuedDate(LocalDate issuedDate) {
+    public void setIssuedDate(String issuedDate) {
         IssuedDate = issuedDate;
     }
 
-    public LocalDate getExpectedReturnDate() {
+    public String getExpectedReturnDate() {
         return expectedReturnDate;
     }
 
-    public void setExpectedReturnDate(LocalDate expectedReturnDate) {
+    public void setExpectedReturnDate(String expectedReturnDate) {
         this.expectedReturnDate = expectedReturnDate;
     }
 
@@ -91,11 +89,11 @@ public class Lend {
     }
 
 
-    public LocalDate getActualReturnDate() {
+    public String getActualReturnDate() {
         return ActualReturnDate;
     }
 
-    public void setActualReturnDate(LocalDate actualReturnDate) {
+    public void setActualReturnDate(String actualReturnDate) {
         ActualReturnDate = actualReturnDate;
     }
 

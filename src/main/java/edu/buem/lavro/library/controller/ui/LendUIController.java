@@ -48,7 +48,7 @@ public class LendUIController {
         lend.setExpectedReturnDate(form.getExpectedReturnDate());
         lend.setAmountOfDiscount(form.getAmountOfDiscount());
         lend.setActualReturnDate(form.getActualReturnDate());
-        lend.setOvertimedOrDamaged(form.isOverOrDamaged());
+        lend.setOvertimedOrDamaged(form.getIsOvertimedOrDamaged());
         lend.setFinalSum(form.getFinalSum());
         service.addNewIssue(lend);
         return "redirect:/ui/lends/";
@@ -65,7 +65,7 @@ public class LendUIController {
         form.setExpectedReturnDate(lendToUpdate.getExpectedReturnDate());
         form.setAmountOfDiscount(lendToUpdate.getAmountOfDiscount());
         form.setActualReturnDate(lendToUpdate.getActualReturnDate());
-        form.setOverOrDamaged(lendToUpdate.isOvertimedOrDamaged());
+        form.setIsOvertimedOrDamaged(lendToUpdate.isOvertimedOrDamaged());
         form.setFinalSum(lendToUpdate.getFinalSum());
 
 
@@ -84,7 +84,7 @@ public class LendUIController {
         lendToUpdate.setExpectedReturnDate(form.getExpectedReturnDate());
         lendToUpdate.setAmountOfDiscount(form.getAmountOfDiscount());
         lendToUpdate.setActualReturnDate(form.getActualReturnDate());
-        lendToUpdate.setOvertimedOrDamaged(form.isOverOrDamaged());
+        lendToUpdate.setOvertimedOrDamaged(form.getIsOvertimedOrDamaged());
         lendToUpdate.setFinalSum(form.getFinalSum());
 
 

@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Add new book</title>
+    <link rel="icon" href=
+    "https://cdn-icons-png.flaticon.com/512/29/29302.png"
+          type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -119,6 +122,7 @@
             margin-right: 3%;
 
         }
+
         .d-grid {
             height: 30px;
         }
@@ -133,14 +137,6 @@
 
 <div class="container">
     <form name="book" action="" method="POST">
-<#--        <div class="row">-->
-<#--            <div class="col-25">-->
-<#--                <label for="fid">ID</label>-->
-<#--            </div>-->
-<#--            <div class="col-75">-->
-<#--                <@spring.formInput "form.bookID" "" "text"/>-->
-<#--            </div>-->
-<#--        </div>-->
 
         <div class="row">
             <div class="col-25">
@@ -192,7 +188,9 @@
 
         <div class="d-grid gap-2 d-md-block">
             <a href="http://localhost:8080/ui/books/"><i class="fa fa-chevron-circle-left fa-2x" aria-hidden="true"></i></a>
-            <button class="glyphicon glyphicon-floppy-disk" type="submit" id="submitButton" value="Create" style="float: right;">Save</button>
+            <button class="glyphicon glyphicon-floppy-disk" type="submit" id="submitButton" value="Create"
+                    style="float: right;">Save
+            </button>
         </div>
     </form>
 </div>
