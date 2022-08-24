@@ -1,12 +1,12 @@
 package edu.buem.lavro.library.form;
 
-import edu.buem.lavro.library.model.ReaderTypes;
+import edu.buem.lavro.library.model.Types;
 
 public class ReaderForm {
     private String readerID;
     private String firstName;
     private String middleName;
-    private ReaderTypes readerTypes;
+    private Types types;
     private String lastName;
     private String address;
     private String telephoneNumber;
@@ -14,11 +14,11 @@ public class ReaderForm {
     public ReaderForm() {
     }
 
-    public ReaderForm(String readerID, String firstName, String middleName, ReaderTypes readerTypes, String lastName, String address, String telephoneNumber) {
+    public ReaderForm(String readerID, String firstName, String middleName, Types readerTypes, String lastName, String address, String telephoneNumber) {
         this.readerID = readerID;
         this.firstName = firstName;
         this.middleName = middleName;
-        this.readerTypes = readerTypes;
+        this.types = readerTypes;
         this.lastName = lastName;
         this.address = address;
         this.telephoneNumber = telephoneNumber;
@@ -48,12 +48,12 @@ public class ReaderForm {
         this.middleName = middleName;
     }
 
-    public ReaderTypes getReaderTypes() {
-        return readerTypes;
+    public Types getTypes() {
+        return types;
     }
 
-    public void setReaderTypes(ReaderTypes readerTypes) {
-        this.readerTypes = readerTypes;
+    public void setTypes(Types types) {
+        this.types = types;
     }
 
     public String getLastName() {
@@ -86,7 +86,7 @@ public class ReaderForm {
                 "readerID='" + readerID + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", middleName='" + middleName + '\'' +
-                ", readerTypes=" + readerTypes +
+                ", readerTypes=" + types +
                 ", lastName='" + lastName + '\'' +
                 ", address='" + address + '\'' +
                 ", telephoneNumber='" + telephoneNumber + '\'' +

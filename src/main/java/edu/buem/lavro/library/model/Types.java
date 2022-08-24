@@ -1,11 +1,11 @@
 package edu.buem.lavro.library.model;
 
-public enum ReaderTypes {
-    STUDENT(15), CLUBCARD(40), JUNIOR(20), PENSIONER(30);
+public enum Types {
+    STUDENT(15), CLUBCARD(40), JUNIOR(20), PENSIONER(30), NONE(0);
 
     private final int discount;
 
-    ReaderTypes(int discount) {
+    Types(int discount) {
         this.discount = discount;
     }
 

@@ -2,7 +2,9 @@ package edu.buem.lavro.library.controller.ui;
 
 import edu.buem.lavro.library.form.ReaderForm;
 import edu.buem.lavro.library.model.Reader;
+import edu.buem.lavro.library.model.Types;
 import edu.buem.lavro.library.service.reader.impl.ReaderServiceImpl;
+import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -35,6 +37,8 @@ public class ReaderUIController {
     public String create(Model model) {
         ReaderForm readerForm = new ReaderForm();
         model.addAttribute("form", readerForm);
+        var types = Types.values();
+        model.addAttribute("types", types);
         return "addReader";
     }
 
@@ -46,7 +50,7 @@ public class ReaderUIController {
         reader.setLastName(form.getLastName());
         reader.setAddress(form.getAddress());
         reader.setTelephoneNumber(form.getTelephoneNumber());
-        reader.setReaderTypes(form.getReaderTypes());
+        reader.setReaderTypes(form.getTypes());
         service.add(reader);
         return "redirect:/ui/readers/";
     }
@@ -61,11 +65,14 @@ public class ReaderUIController {
         readerForm.setLastName(readerToUpdate.getLastName());
         readerForm.setAddress(readerToUpdate.getAddress());
         readerForm.setTelephoneNumber(readerToUpdate.getTelephoneNumber());
-        readerForm.setReaderTypes(readerToUpdate.getReaderTypes());
+        readerForm.setTypes(readerToUpdate.getReaderTypes());
+        var types = Types.values();
+        model.addAttribute("types", types);
         model.addAttribute("form", readerForm);
         return "updateReader";
     }
 
+    @RequestMapping(value = "/edit/{id}", method = RequestMethod.POST)
     public String update(@ModelAttribute("form") ReaderForm form) {
         System.out.println(form);
         Reader readerToUpdate = new Reader();
@@ -75,7 +82,7 @@ public class ReaderUIController {
         readerToUpdate.setLastName(form.getLastName());
         readerToUpdate.setAddress(form.getAddress());
         readerToUpdate.setTelephoneNumber(form.getTelephoneNumber());
-        readerToUpdate.setReaderTypes(form.getReaderTypes());
+        readerToUpdate.setReaderTypes(form.getTypes());
 
         service.update(readerToUpdate);
         return "redirect:/ui/readers/";

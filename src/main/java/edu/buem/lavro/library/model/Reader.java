@@ -12,7 +12,7 @@ public class Reader {
     private String readerID;
     private String firstName;
     private String middleName;
-    private ReaderTypes readerTypes;
+    private Types readerTypes;
     private String lastName;
     private String address;
     private String telephoneNumber;
@@ -20,7 +20,7 @@ public class Reader {
     public Reader() {
     }
 
-    public Reader(String readerID, String firstName, String middleName, ReaderTypes readerTypes, String lastName, String address, String telephoneNumber) {
+    public Reader(String readerID, String firstName, String middleName, Types readerTypes, String lastName, String address, String telephoneNumber) {
         this.readerID = readerID;
         this.firstName = firstName;
         this.middleName = middleName;
@@ -30,11 +30,11 @@ public class Reader {
         this.telephoneNumber = telephoneNumber;
     }
 
-    public ReaderTypes getReaderTypes() {
+    public Types getReaderTypes() {
         return readerTypes;
     }
 
-    public void setReaderTypes(ReaderTypes readerTypes) {
+    public void setReaderTypes(Types readerTypes) {
         this.readerTypes = readerTypes;
     }
 

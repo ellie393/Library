@@ -89,8 +89,8 @@
 <ul class="mainmenu">
     <li class="icon"><a href="http://localhost:8080/ui/main/" title="Main"><i class="fa fa-home"></i></a></li>
     <li><a href="http://localhost:8080/ui/books/" title="Books"><i class="fa fa-book"></i></a></li>
-    <li><a href="members.html" title="Readers"><i class="fa fa-users"></i></a></li>
-    <li><a href="albums.html" title="Lends"><i class="fa fa-plus-square"></i></a></li>
+    <li><a href="http://localhost:8080/ui/readers/" title="Readers"><i class="fa fa-users"></i></a></li>
+    <li><a href="http://localhost:8080/ui/lends/" title="Lends"><i class="fa fa-plus-square"></i></a></li>
 </ul>
 <div class="title">
     Welcome to Magic Library
