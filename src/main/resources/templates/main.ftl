@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome page</title>
-    <link rel = "icon" href =
+    <link rel="icon" href=
     "https://cdn-icons-png.flaticon.com/512/29/29302.png"
-          type = "image/x-icon">
+          type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap"
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <style>
         /*Подсветка активной вкладки меню*/
         .icon {
@@ -68,22 +70,41 @@
             color: #660066;
             font-size: 100px;
             text-align: center;
-            margin-top: 10%;
+            margin-top: 5%;
             margin-bottom: 5%;
         }
 
-        .myName  {
+        .myName {
             margin-right: 3%;
             text-align: right;
             color: #1a001a;
             font-family: 'Dancing Script', cursive;
         }
+
         .school, .date {
             margin-right: 3%;
 
             text-align: right;
             font-family: 'Playfair Display', serif;
             color: #1a001a;
+        }
+
+        q {
+            /*font-style: italic;*/
+            text-align: center;
+            color: black;
+            font-size: 25px;
+            font-family: 'Indie Flower', cursive;
+        }
+
+        .author {
+            color: black;
+            font-family: 'Caveat', cursive;
+            font-size: 20px;
+        }
+        .contents{
+            margin-top: 1%;
+            text-align: center;
         }
 
     </style>
@@ -95,6 +116,10 @@
     <li><a href="http://localhost:8080/ui/readers/" title="Readers"><i class="fa fa-users"></i></a></li>
     <li><a href="http://localhost:8080/ui/lends/" title="Lends"><i class="fa fa-plus-square"></i></a></li>
 </ul>
+<div class="contents">
+    <q>The only thing that you absolutely have to know, is the location of the library</q>
+    <p class="author">Albert Einstein </p>
+</div>
 <div class="title">
     Welcome to Magic Library
 </div>
