@@ -37,7 +37,9 @@ public class BookUIController {
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String create(Model model) {
         BookForm bookForm = new BookForm();
+        var genres = Genres.values();
         model.addAttribute("form", bookForm);
+        model.addAttribute("genres", genres);
         return "addBooks";
     }
 

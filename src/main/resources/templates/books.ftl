@@ -53,7 +53,7 @@
         }
 
         .mainmenu li:hover {
-            background-color: #dab3ff;
+            background-color: #ce99ff;
         }
 
         /*Подсветка активной вкладки меню*/
@@ -74,9 +74,6 @@
             font-size: medium;
         }
 
-        .create {
-
-        }
 
         th, td {
             border-bottom: 1px solid #ddd;
@@ -92,7 +89,7 @@
 </head>
 <body>
 <ul class="mainmenu">
-    <li><a href="main.html" title="Main"><i class="fa fa-home"></i></a></li>
+    <li><a href="http://localhost:8080/ui/main/" title="Main"><i class="fa fa-home"></i></a></li>
     <li class="icon"><a href="history.html" title="Books"><i class="fa fa-book"></i></a></li>
     <li><a href="members.html" title="Readers"><i class="fa fa-users"></i></a></li>
     <li><a href="albums.html" title="Lends"><i class="fa fa-plus-square"></i></a></li>
