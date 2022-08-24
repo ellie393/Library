@@ -3,12 +3,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Edit book</title>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
 
     <style>
         body {
-            margin-left: 80px;
+            margin-left: 30%;
             margin-top: 10px;
+            margin-right: 30%;
             padding: 10px;
             background-size: cover;
             background-repeat: no-repeat;
@@ -18,24 +24,24 @@
         }
 
 
-        .container {
-            width: fit-content;
-            background-color: #ce99ff;
-            align-content: center;
-            position: center;
-
+        * {
+            box-sizing: border-box;
         }
 
-        select, .mb-3 {
-            /*width: 50%;*/
+        input[type=text], select, textarea {
+            width: 100%;
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 4px;
             resize: vertical;
-
         }
 
-        .submit {
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
             background-color: #04AA6D;
             color: white;
             padding: 12px 20px;
@@ -45,73 +51,151 @@
             float: right;
         }
 
-        .submit:hover {
+        input[type=submit]:hover {
             background-color: #45a049;
         }
+
+        .container {
+            background-color: #ce99ff;
+            border-radius: 5px;
+            padding: 20px;
+            font-family: 'DynaPuff', cursive;
+            font-size: medium;
+        }
+
+        .col-25 {
+            float: right;
+            text-align: -moz-center;
+            width: 20%;
+            margin-top: 6px;
+            margin-left: 25px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+            font-family: 'DynaPuff', cursive;
+            font-size: medium;
+
+        }
+
+
+        h1 {
+            font-family: 'Gloria Hallelujah', cursive;
+            color: #660066;
+            font-size: 3em;
+            text-align: center;
+            /*float: center;*/
+            margin-bottom: 30px;
+            background-color: #cccccc;
+
+
+        }
+
+        a {
+            width: 30%;
+            float: left;
+            margin-left: 3%;
+
+            /*size: 25px;*/
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        i {
+            color: #330033;
+            text-align: left;
+            background-color: #ce99ff;
+        }
+
+        .glyphicon {
+            margin-right: 3%;
+
+        }
+        .d-grid {
+            height: 30px;
+        }
+
+
     </style>
 </head>
 
 <body>
+
+<h1> Book editing</h1>
+
 <div class="container">
-    <form id="contactForm" data-sb-form-api-token="API_TOKEN" name="book" action="" method="POST">
-        <div class="mb-3">
-            Id:<@spring.formInput "form.bookID" "" "text"/>
-        </div>
-        <div class="mb-3">
-            Title:<@spring.formInput "form.title" "" "text"/>
-        </div>
-        <div class="mb-3">
-            Author:<@spring.formInput "form.author" "" "text"/>
-        </div>
-        <div class="mb-3">
-            Deposit:<@spring.formInput "form.collateralValue" "" "text"/>
-        </div>
-        <div class="mb-3">
-            Price:<@spring.formInput "form.rentalPrice" "" "text"/>
-        </div>
-        <div class="mb-3">
-            Genre:<@spring.formSingleSelect "form.genres" genres ""/>
-            <#--            <select class="form-select" id="genre" aria-label="Genre">-->
-            <#--                &lt;#&ndash;<#list readertypes ></#list>&ndash;&gt;-->
-            <#--                <option value=>Fantasy</option>-->
-            <#--                <option value="Science Fiction">Science Fiction</option>-->
-            <#--                <option value="Dystopian">Dystopian</option>-->
-            <#--                <option value="Action and Adventure">Action and Adventure</option>-->
-            <#--                <option value="Mystery">Mystery</option>-->
-            <#--                <option value="Horror">Horror</option>-->
-            <#--                <option value="Thriller and Suspense">Thriller and Suspense</option>-->
-            <#--                <option value="Historical Fiction">Historical Fiction</option>-->
-            <#--                <option value="Romance">Romance</option>-->
-            <#--                <option value="Contemporary Fiction">Contemporary Fiction</option>-->
-            <#--                <option value="Literary Fiction">Literary Fiction</option>-->
-            <#--                <option value="Magical Realism">Magical Realism</option>-->
-            <#--                <option value="Graphic Novel">Graphic Novel</option>-->
-            <#--                <option value="Short Story">Short Story</option>-->
-            <#--                <option value="Biography">Biography</option>-->
-            <#--                <option value="Self help">Self help</option>-->
-            <#--                <option value="History">History</option>-->
-            <#--                <option value="Travel">Travel</option>-->
-            <#--                <option value="True Crime">True Crime</option>-->
-            <#--                <option value="Humor">Humor</option>-->
-            <#--                <option value="Essays">Essays</option>-->
-            <#--                <option value="Religion">Religion</option>-->
-            <#--                <option value="Science">Science</option>-->
-            <#--            </select>-->
-        </div>
-        <div class="d-none" id="submitSuccessMessage">
-            <div class="text-center mb-3">
-                <div class="fw-bolder">Form submission successful!</div>
+    <form name="book" action="" method="POST">
+        <div class="row">
+            <div class="col-25">
+                <label for="fid">ID</label>
+            </div>
+            <div class="col-75">
+                <@spring.formInput "form.bookID" "" "text"/>
             </div>
         </div>
-        <div class="d-none" id="submitErrorMessage">
-            <div class="text-center text-danger mb-3">Error sending message!</div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="ltitle">Title</label>
+            </div>
+            <div class="col-75">
+                <@spring.formInput "form.title" "" "text"/>
+            </div>
         </div>
-        <div class="d-grid">
-            <button class="submit" id="submitButton" type="submit" value="Save">Save</button>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="lauthor">Author</label>
+            </div>
+            <div class="col-75">
+                <@spring.formInput "form.author" "" "text"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="ldeposit">Deposit</label>
+            </div>
+            <div class="col-75">
+                <@spring.formInput "form.collateralValue" "" "text"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="lprice">Price</label>
+            </div>
+            <div class="col-75">
+                <@spring.formInput "form.rentalPrice" "" "text"/>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-25">
+                <label for="genre">Genre</label>
+            </div>
+            <div class="col-75">
+                <@spring.formSingleSelect "form.genres" genres ""/>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="d-grid gap-2 d-md-block">
+            <a href="http://localhost:8080/ui/books/"><i class="fa fa-chevron-circle-left fa-2x" aria-hidden="true"></i></a>
+            <button class="glyphicon glyphicon-floppy-disk" type="submit" id="submitButton" value="Save" style="float: right;">Save</button>
         </div>
     </form>
 </div>
-<button class="back"><a href="http://localhost:8080/ui/books/">Back</a></button>
+
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 </html>

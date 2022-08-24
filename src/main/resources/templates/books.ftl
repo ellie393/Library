@@ -84,6 +84,7 @@
 
         .icons {
             /*background-color: #dab3ff;*/
+            color: #660066;
         }
 
 
@@ -97,7 +98,8 @@
     <li><a href="albums.html" title="Lends"><i class="fa fa-plus-square"></i></a></li>
 </ul>
 
-<h1 class="display-4">List of our Magic Books <i class="fa fa-magic" aria-hidden="true"></i></h1>
+<h1 class="display-4">List of our Magic Books <a
+            href="http://localhost:8080/ui/books/add"><i class="fa fa-magic" aria-hidden="true"></i></a></h1>
 <div class="table-center">
     <div>
         <table class="table table-hover">
@@ -120,10 +122,10 @@
                     <td>${book.collateralValue}</td>
                     <td>${book.rentalPrice}</td>
                     <td>${book.genres}</td>
-                    <td style="clear: right"><a class="icons" href="/ui/books/delete/${book.bookID}" title="Delete"><i
+                    <td><a class="icons" href="/ui/books/delete/${book.bookID}" title="Delete"><i
                                     class="fa fa-trash fa-2x"></i>
                         </a></td>
-                    <td><a href="/ui/books/edit/${book.bookID}" title="Edit">
+                    <td><a class="icons" href="/ui/books/edit/${book.bookID}" title="Edit">
                             <i class="fa fa-pencil fa-2x" aria-hidden="true"></i>
                         </a></td>
                 </tr>
@@ -132,6 +134,6 @@
     </div>
 </div>
 
-<a href="http://localhost:8080/ui/books/add" class="create">CREATE</a>
+<#--<a href="http://localhost:8080/ui/books/add" class="create">CREATE</a>-->
 </body>
 </html>

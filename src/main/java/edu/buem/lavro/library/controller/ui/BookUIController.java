@@ -69,6 +69,7 @@ public class BookUIController {
         return "updateBook";
     }
 
+    @RequestMapping(value = "/edit/{id}", method = RequestMethod.POST)
     public String update(@ModelAttribute("form") BookForm form) {
         System.out.println(form);
         Book bookToUpdate = new Book();
