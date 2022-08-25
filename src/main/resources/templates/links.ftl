@@ -109,6 +109,155 @@
 
         }
 
+        /* Section 2*/
+        body {
+            /*background: #262a2b;*/
+        }
+
+        .tilesWrap {
+            padding: 0;
+            margin: 50px auto;
+            list-style: none;
+            text-align: center;
+        }
+
+        .tilesWrap li {
+            display: inline-block;
+            width: 25%;
+            min-width: 260px;
+            max-width: 270px;
+            padding: 80px 20px 40px;
+            position: relative;
+            vertical-align: top;
+            margin: 10px;
+            font-family: 'helvetica', sans-serif;
+            min-height: 25vh;
+            /*background: #262a2b;*/
+            background: #13001a;
+            border: 1px solid #252727;
+            text-align: left;
+        }
+
+        .tilesWrap li h2 {
+            font-size: 114px;
+            margin: 0;
+            position: absolute;
+            opacity: 0.5;
+            top: 50px;
+            right: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .tilesWrap li h3 {
+            font-size: 20px;
+            color: #b7b7b7;
+
+
+            margin-left: 0;
+            margin-right: 8px;
+            margin-bottom: 5px;
+        }
+
+        .tilesWrap li p {
+            font-size: 16px;
+            line-height: 18px;
+            color: #b7b7b7;
+            margin-top: 5px;
+        }
+
+        .tilesWrap li button {
+            background: transparent;
+            border: 1px solid #b7b7b7;
+            padding: 10px 20px;
+            color: #b7b7b7;
+            border-radius: 3px;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            transform: translateY(-40px);
+            opacity: 0;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .tilesWrap li button:before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 120%;
+            background: #b7b7b7;
+            top: 0;
+            opacity: 0;
+            left: -140px;
+            border-radius: 0 20px 20px 0;
+            z-index: -1;
+            transition: all 0.3s ease-in-out;
+
+        }
+
+        .tilesWrap li:hover button {
+            transform: translateY(5px);
+            opacity: 1;
+        }
+
+        .tilesWrap li button:hover {
+            color: #262a2b;
+        }
+
+        .tilesWrap li button:hover:before {
+            left: 0;
+            opacity: 1;
+        }
+
+        .tilesWrap li:hover h2 {
+            top: 0px;
+            opacity: 0.6;
+        }
+
+        .tilesWrap li:before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            z-index: -1;
+            background: #fff;
+            transform: skew(2deg, 2deg);
+        }
+
+        .tilesWrap li:after {
+            content: '';
+            position: absolute;
+            width: 40%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .tilesWrap li:nth-child(1):before {
+            background: #C9FFBF;
+            background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);
+            background: linear-gradient(to right, #FFAFBD, #C9FFBF);
+        }
+
+        .tilesWrap li:nth-child(2):before {
+            background: #f2709c;
+            background: -webkit-linear-gradient(to right, #ff9472, #f2709c);
+            background: linear-gradient(to right, #ff9472, #f2709c);
+        }
+
+        .tilesWrap li:nth-child(3):before {
+            background: #c21500;
+            background: -webkit-linear-gradient(to right, #ffc500, #c21500);
+            background: linear-gradient(to right, #ffc500, #c21500);
+        }
+
+        .tilesWrap li:nth-child(4):before {
+            background: #FC354C;
+            background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);
+            background: linear-gradient(to right, #0ABFBC, #FC354C);
+        }
 
     </style>
 </head>
@@ -132,7 +281,7 @@
     <ul class="nav navbar-nav">
         <li><a href="#section1">UML diagram</a></li>
         <li><a href="#section2">Used technologies</a></li>
-<#--        <li><a href="#section3">REST</a></li>-->
+        <#--        <li><a href="#section3">REST</a></li>-->
     </ul>
 </nav>
 
@@ -147,94 +296,99 @@
     <div id="section2">
         <h1 class="sections-headers">Used technologies</h1>
 
-        <!-- Section 1 -->
-        <section class="main">
-            <div class="container max-w-6xl mx-auto">
-                <h2 class="text-4xl font-bold tracking-tight text-center">Our Features</h2>
-                <p class="mt-2 text-lg text-center text-gray-600">Check out our list of awesome features below.</p>
-                <div class="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
+        <ul class="tilesWrap">
+            <li>
+                <h2>01</h2>
 
-                    <div class="relative flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-100 sm:rounded-xl">
-                        <div class="p-3 text-white bg-indigo-400 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M14 3v4a1 1 0 0 0 1 1h4" class=""></path><path d="M5 8v-3a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-5" class=""></path><circle cx="6" cy="14" r="3"></circle><path d="M4.5 17l-1.5 5l3 -1.5l3 1.5l-1.5 -5"></path></svg>
-                        </div>
-                        <h4 class="text-xl font-medium text-gray-700">	Java 11</h4>
-                        <p class="text-base text-center text-gray-500"></p>
-                    </div>
+                <h3>Java 11</h3>
 
-                    <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
-                        <div class="p-3 text-white bg-indigo-400 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M18 8a3 3 0 0 1 0 6"></path><path d="M10 8v11a1 1 0 0 1 -1 1h-1a1 1 0 0 1 -1 -1v-5"></path><path d="M12 8h0l4.524 -3.77a0.9 .9 0 0 1 1.476 .692v12.156a0.9 .9 0 0 1 -1.476 .692l-4.524 -3.77h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h8"></path></svg>
-                        </div>
-                        <h4 class="text-xl font-medium text-gray-700">IntelliJ Idea Ultimate</h4>
-                        <p class="text-base text-center text-gray-500"></p>
-                    </div>
+            </li>
+            <li>
+                <h2>02</h2>
+                <h3>IntelliJ IDEA <br>Ultimate</h3>
+            </li>
+            <li>
+                <h2>03</h2>
+                <h3> JUnit 5</h3>
 
-                    <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
-                        <div class="p-3 text-white bg-indigo-400 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 " viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"></polyline><line x1="12" y1="12" x2="20" y2="7.5"></line><line x1="12" y1="12" x2="12" y2="21"></line><line x1="12" y1="12" x2="4" y2="7.5"></line><line x1="16" y1="5.25" x2="8" y2="9.75"></line></svg>
-                        </div>
-                        <h4 class="text-xl font-medium text-gray-700">JUnit 5</h4>
-                        <p class="text-base text-center text-gray-500"></p>
-                    </div>
+            </li>
+            <li>
+                <h2>04</h2>
+                <h3>Maven</h3>
+            </li>
+        </ul>
+        <ul class="tilesWrap">
+            <li>
+                <h2>05</h2>
+                <h3> Spring Boot <br> 2.6 </h3>
+            </li>
+            <li>
+                <h2>06</h2>
+                <h3>N-tier <br> architecture </h3>
+            </li>
+            <li>
+                <h2>07</h2>
+                <h3>UML diagram </h3>
 
-                    <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
-                        <div class="p-3 text-white bg-indigo-400 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M8 9l3 3l-3 3"></path><line x1="13" y1="15" x2="16" y2="15"></line><rect x="3" y="4" width="18" height="16" rx="2"></rect></svg>
-                        </div>
-                        <h4 class="text-xl font-medium text-gray-700">Maven</h4>
-                        <p class="text-base text-center text-gray-500"></p>
-                    </div>
+            </li>
+            <li>
+                <h2>08</h2>
+                <h3>REST API </h3>
+            </li>
+        </ul>
 
-                    <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
-                        <div class="p-3 text-white bg-indigo-400 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="9.5" y1="11" x2="9.51" y2="11"></line><line x1="14.5" y1="11" x2="14.51" y2="11"></line><path d="M9.5 15a3.5 3.5 0 0 0 5 0"></path><path d="M7 5h1v-2h8v2h1a3 3 0 0 1 3 3v9a3 3 0 0 1 -3 3v1h-10v-1a3 3 0 0 1 -3 -3v-9a3 3 0 0 1 3 -3" class=""></path></svg>
-                        </div>
-                        <h4 class="text-xl font-medium text-gray-700">Spring Boot 2.6</h4>
-                        <p class="text-base text-center text-gray-500"></p>
-                    </div>
+        <ul class="tilesWrap">
+            <li>
+                <h2>09</h2>
+                <h3>Java Servlet </h3>
+            </li>
+            <li>
+                <h2>10</h2>
+                <h3>Apache<br>Freemarker </h3>
+            </li>
+            <li>
+                <h2>11</h2>
+                <h3>Tomcat server <br> 9.0.65 </h3>
 
-                    <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
-                        <div class="p-3 text-white bg-indigo-400 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="15" y1="5" x2="15" y2="7"></line><line x1="15" y1="11" x2="15" y2="13"></line><line x1="15" y1="17" x2="15" y2="19"></line><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"></path></svg>
-                        </div>
-                        <h4 class="text-xl font-medium text-gray-700">N-tier architecture </h4>
-                        <p class="text-base text-center text-gray-500"></p>
-                    </div>
+            </li>
+            <li>
+                <h2>12</h2>
+                <h3>MongoDB </h3>
+            </li>
+        </ul>
 
-                    <div class="relative flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-100 sm:rounded-xl">
-                        <div class="p-3 text-white bg-indigo-400 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M14 3v4a1 1 0 0 0 1 1h4" class=""></path><path d="M5 8v-3a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-5" class=""></path><circle cx="6" cy="14" r="3"></circle><path d="M4.5 17l-1.5 5l3 -1.5l3 1.5l-1.5 -5"></path></svg>
-                        </div>
-                        <h4 class="text-xl font-medium text-gray-700"> UML diagram </h4>
-                        <p class="text-base text-center text-gray-500"></p>
-                    </div>
+        <ul class="tilesWrap">
+            <li>
+                <h2>13</h2>
+                <h3>Mongo <br> Compass</h3>
+            </li>
+            <li>
+                <h2>14</h2>
+                <h3>ORM <br>MongoRepository </h3>
+            </li>
+            <li>
+                <h2>15</h2>
+                <h3>Postman </h3>
 
-                    <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
-                        <div class="p-3 text-white bg-indigo-400 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M18 8a3 3 0 0 1 0 6"></path><path d="M10 8v11a1 1 0 0 1 -1 1h-1a1 1 0 0 1 -1 -1v-5"></path><path d="M12 8h0l4.524 -3.77a0.9 .9 0 0 1 1.476 .692v12.156a0.9 .9 0 0 1 -1.476 .692l-4.524 -3.77h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h8"></path></svg>
-                        </div>
-                        <h4 class="text-xl font-medium text-gray-700"> REST API </h4>
-                        <p class="text-base text-center text-gray-500"></p>
-                    </div>
+            </li>
+            <li>
+                <h2>16</h2>
+                <h3>BootStrap <br> framework </h3>
+            </li>
+        </ul>
 
-                    <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
-                        <div class="p-3 text-white bg-indigo-400 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 " viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"></polyline><line x1="12" y1="12" x2="20" y2="7.5"></line><line x1="12" y1="12" x2="12" y2="21"></line><line x1="12" y1="12" x2="4" y2="7.5"></line><line x1="16" y1="5.25" x2="8" y2="9.75"></line></svg>
-                        </div>
-                        <h4 class="text-xl font-medium text-gray-700">Java Servlet</h4>
-                        <p class="text-base text-center text-gray-500"></p>
-                    </div>
+        <ul class="tilesWrap">
+            <li>
+                <h2>17</h2>
+                <h3>WEB design:<br><br>- CSS <br>- JavaScript</h3>
+            </li>
+            <li>
+                <h2>18</h2>
+                <h3>VCS <br>GitHub </h3>
+            </li>
 
-                </div>
-            </div>
-        </section>
-
+        </ul>
     </div>
-<#--    <div id="section3">-->
-<#--        <h1>REST API</h1>-->
-<#--        <p>Try to scroll this page and look at the navigation bar while scrolling!</p>-->
-<#--    </div>-->
 </div>
 </body>
 </html>
