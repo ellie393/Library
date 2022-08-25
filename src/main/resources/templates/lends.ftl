@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>List of lends</title>
-    <link rel = "icon" href =
+    <link rel="icon" href=
     "https://cdn-icons-png.flaticon.com/512/29/29302.png"
-          type = "image/x-icon">
+          type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -15,7 +15,7 @@
         body {
             padding: 0;
             margin: 0;
-            /*background-image: url(main/library.jpg);*/
+            background-image: url("https://img.freepik.com/free-photo/wooden-table-with-blurred-background_1134-14.jpg?w=1060&t=st=1661453386~exp=1661453986~hmac=6f74c4d406ec3ab2d210f570aff382e895cf666798fb26a55addce66f5a46568");
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -32,6 +32,11 @@
             /*float: center;*/
             margin-bottom: 30px;
 
+        }
+
+        a {
+            text-decoration: none;
+            color: #660066;
         }
 
         .mainmenu {
@@ -72,7 +77,8 @@
         }
 
         table {
-            background-color: #ce99ff;
+            background-color: #d7c1cc;
+            opacity: 0.8;
             font-family: 'DynaPuff', cursive;
             font-size: medium;
         }
@@ -96,6 +102,8 @@
     <li><a href="http://localhost:8080/ui/books/" title="Books"><i class="fa fa-book"></i></a></li>
     <li><a href="http://localhost:8080/ui/readers/" title="Readers"><i class="fa fa-users"></i></a></li>
     <li class="icon"><a href="http://localhost:8080/ui/lends/" title="Lends"><i class="fa fa-plus-square"></i></a></li>
+    <li><a href="http://localhost:8080/ui/links/" title="Information"><i class="fa fa-info-circle" aria-hidden="true"></i></a></li>
+
 </ul>
 
 <h1 class="display-4">List of our Magic Lends <a
@@ -104,14 +112,14 @@
     <div>
         <table class="table table-hover">
             <thead>
-<#--            <th> ID</th>-->
+            <#--            <th> ID</th>-->
             <th> Book</th>
             <th> Reader</th>
             <th> Issued Date</th>
             <th> Expected Return Date</th>
             <th> Amount Of Discount</th>
             <th> Actual Return Date</th>
-<#--            <th> Is Over Or Damaged</th>-->
+            <#--            <th> Is Over Or Damaged</th>-->
             <th> Final Sum</th>
             <#--            <th></th>-->
             <#--            <th></th>-->
@@ -119,14 +127,14 @@
             <tbody
             <#list lends as lend >
                 <tr>
-<#--                    <td>${lend.id}</td>-->
+                    <#--                    <td>${lend.id}</td>-->
                     <td>${lend.book}</td>
                     <td>${lend.reader}</td>
                     <td>${lend.issuedDate}</td>
                     <td>${lend.expectedReturnDate}</td>
                     <td>${lend.amountOfDiscount}</td>
                     <td>${lend.actualReturnDate}</td>
-<#--                    <td>${lend.isOvertimedOrDamaged}</td>-->
+                    <#--                    <td>${lend.isOvertimedOrDamaged}</td>-->
                     <td>${lend.finalSum}</td>
                     <td><a class="icons" href="/ui/lends/delete/${lend.id}" title="Delete"><i
                                     class="fa fa-trash fa-2x"></i>

@@ -28,10 +28,8 @@
             margin-top: 10px;
             padding: 10px;
 
+            background-image: url("https://img.freepik.com/free-photo/abstract-blur-defocused-bookshelf-library_1203-9639.jpg?w=1060&t=st=1661449353~exp=1661449953~hmac=9ddcdad0da2a270ea54e89c0f3db65e586f29b8c172c10862738f23afbee0fa6");
 
-            /*padding: 0;*/
-            /*margin: 0;*/
-            /*background-image: url(main/library.jpg);*/
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -66,15 +64,25 @@
 
 
         .title {
+            opacity: 0.8;
             font-family: 'Aclonica', sans-serif;
-            color: #660066;
+            /*color: #660066;*/
             font-size: 100px;
             text-align: center;
-            margin-top: 5%;
-            margin-bottom: 5%;
+            margin-top: 3%;
+            margin-bottom: 4%;
+            margin-right: 2%;
+            color: #330033;
+            background-color: #f2f2f2;
+            filter: alpha(Opacity=70);
+
+            box-shadow: 0 0 3px 7px #f2f2f2;
+
         }
 
+
         .myName {
+            filter: alpha(Opacity=70);
             margin-right: 3%;
             text-align: right;
             color: #1a001a;
@@ -83,11 +91,27 @@
 
         .school, .date {
             margin-right: 3%;
-
+            filter: alpha(Opacity=70);
             text-align: right;
             font-family: 'Playfair Display', serif;
             color: #1a001a;
         }
+
+        .quote {
+            background-color: #f2f2f2;
+            opacity: 0.8;
+            padding: 5px;
+
+            box-shadow: 0 0 3px 7px #f2f2f2;
+        }
+
+        .sign {
+            background-color: #f2f2f2;
+            opacity: 0.8;
+            padding: 1px;
+
+        }
+
 
         q {
             /*font-style: italic;*/
@@ -100,11 +124,54 @@
         .author {
             color: black;
             font-family: 'Caveat', cursive;
-            font-size: 20px;
+            font-size: 23px;
         }
-        .contents{
+
+        .contents {
             margin-top: 1%;
             text-align: center;
+        }
+
+        .mySlides {
+            display: none;
+            text-align: center;
+        }
+
+        /*Изображение курсора(рука)*/
+        .cursor {
+            cursor: pointer;
+        }
+
+        /*Следующие и предыдущие кнопки*/
+        .prev, .next {
+            cursor: pointer; /*устанавливаем курсор принаведении - рука*/
+            position: absolute;
+            margin-left: -33%;
+            display: inline-block;
+            margin-right: 10%;
+            top: 10%;
+            /*margin-left: -50px;*/
+            margin-top: -50px;
+            padding: 16px;
+            color: #1a001a;
+            font-weight: bold; /*полужирное начертание*/
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+            text-decoration: none;
+        }
+
+        /*Ставим кнопку"next" справа*/
+        .next {
+            right: 70px;
+            border-radius: 3px 0 0 3px;
+
+        }
+
+        /*Добавляем черный фон с прозрачностью при наведении*/
+        .prev:hover, .next:hover {
+            background-color: #f2f2f2;
         }
 
     </style>
@@ -115,17 +182,91 @@
     <li><a href="http://localhost:8080/ui/books/" title="Books"><i class="fa fa-book"></i></a></li>
     <li><a href="http://localhost:8080/ui/readers/" title="Readers"><i class="fa fa-users"></i></a></li>
     <li><a href="http://localhost:8080/ui/lends/" title="Lends"><i class="fa fa-plus-square"></i></a></li>
+    <li><a href="http://localhost:8080/ui/links/" title="Information"><i class="fa fa-info-circle" aria-hidden="true"></i></a></li>
+
 </ul>
+
 <div class="contents">
-    <q>The only thing that you absolutely have to know, is the location of the library</q>
-    <p class="author">Albert Einstein </p>
+    <div class="mySlides">
+        <span class="quote"><q>The only thing that you absolutely have to know, is the location of the library</q>
+        <p class="author">- Albert Einstein -</p></span>
+    </div>
+    <div class="mySlides">
+        <span class="quote"><q>Books may well be the only true magic</q>
+        <p class="author">- Alice Hoffman -</p></span>
+    </div>
+    <div class="mySlides">
+        <span class="quote"><q>Books are a uniquely portable magic</q>
+        <p class="author">- Stephen King -</p></span>
+    </div>
+    <div class="mySlides">
+        <span class="quote"><q>Books are mirrors: You only see in them what you already have inside you</q>
+        <p class="author">- Carlos Ruiz Zafón -</p></span>
+    </div>
+    <div class="mySlides">
+        <span class="quote"><q>If you don’t like to read, you haven’t found the right book</q>
+        <p class="author">- J.K. Rowling -</p></span>
+    </div>
+    <div class="mySlides">
+        <span class="quote"><q>Some books leave us free and some books make us free</q>
+        <p class="author">- Ralph Waldo Emerson -</p></span>
+    </div>
+    <div class="mySlides">
+        <span class="quote"><q>Once you learn to read, you will be forever free</q>
+        <p class="author">- Frederick Douglass -</p></span>
+    </div>
+
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    //Следующий/предыдущий слайд
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById('caption');
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace("active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += "active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+</script>
+
 <div class="title">
-    Welcome to Magic Library
+    Welcome to Midnight Library
 </div>
-<h2 class="school">Summer School Final project</h2>
-<h2 class="myName">Made by Olena Lavro</h2>
-<h2 class="date">2022</h2>
+<h2 class="date"><span class="sign">University of Economics and Management of Bratislava</span></h2>
+<h2 class="school"><span class="sign">Summer School Final project</span></h2>
+
+<h2 class="myName"><span class="sign">Made by Olena Lavro</span></h2>
+
+<h2 class="date"><span class="sign">2022</span></h2>
 
 
 </body>

@@ -24,6 +24,8 @@
             background-attachment: fixed;
             background-color: #dab3ff;
             background-position: center;
+            /*background-image: url("https://img.freepik.com/free-photo/book-library-with-open-textbook_1150-5921.jpg?w=1060&t=st=1661455607~exp=1661456207~hmac=f3fdf282c2eadd714abebba03e9b00df6882930da71a0eb3afffbefc38b7fa1f");*/
+        background-image: url("https://media.istockphoto.com/photos/defocused-bookstore-background-shelves-with-books-picture-id509109438?k=20&m=509109438&s=612x612&w=0&h=htK64c45n6DIlkB8uCnLkACRs_r2RS71TBM0g4iumGE=");
         }
 
 
@@ -59,7 +61,7 @@
         }
 
         .container {
-            background-color: #ce99ff;
+            background-color: #f2f2f2;
             border-radius: 5px;
             padding: 20px;
             font-family: 'DynaPuff', cursive;
@@ -91,8 +93,8 @@
             text-align: center;
             /*float: center;*/
             margin-bottom: 30px;
-            background-color: #cccccc;
-            height: 60px;
+            /*background-color: #cccccc;*/
+            /*height: 60px;*/
 
 
         }
@@ -115,7 +117,7 @@
         i {
             color: #330033;
             text-align: left;
-            background-color: #ce99ff;
+            /*background-color: #ce99ff;*/
         }
 
         .glyphicon {
@@ -127,12 +129,20 @@
             height: 30px;
         }
 
+        span {
+            background-color: #f2f2f2;
+            opacity: 0.8;
+            padding: 5px;
+
+            box-shadow: 0 0 3px 7px #f2f2f2;
+        }
 
     </style>
 </head>
 
 <body>
 
+<#--<h1><span>Adding new Magic Book</span></h1>-->
 <h1>Adding new Magic Book</h1>
 
 <div class="container">

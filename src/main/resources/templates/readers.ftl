@@ -21,6 +21,7 @@
             background-attachment: fixed;
             background-color: #dab3ff;
             background-position: center;
+            background-image: url("https://img.freepik.com/free-photo/wooden-table-with-blurred-background_1134-14.jpg?w=1060&t=st=1661453386~exp=1661453986~hmac=6f74c4d406ec3ab2d210f570aff382e895cf666798fb26a55addce66f5a46568");
         }
 
         h1 {
@@ -72,10 +73,16 @@
         }
 
         table {
-            background-color: #ce99ff;
+            background-color: #d7c1cc;
+            opacity: 0.8;
             font-family: 'DynaPuff', cursive;
             font-size: medium;
         }
+        a {
+            text-decoration: none;
+            color: #660066;
+        }
+
 
 
         th, td {
@@ -96,6 +103,8 @@
     <li><a href="http://localhost:8080/ui/books/" title="Books"><i class="fa fa-book"></i></a></li>
     <li class="icon"><a href="http://localhost:8080/ui/readers/" title="Readers"><i class="fa fa-users"></i></a></li>
     <li><a href="http://localhost:8080/ui/lends/" title="Lends"><i class="fa fa-plus-square"></i></a></li>
+    <li><a href="http://localhost:8080/ui/links/" title="Information"><i class="fa fa-info-circle" aria-hidden="true"></i></a></li>
+
 </ul>
 
 <h1 class="display-4">List of our Magic Readers <a

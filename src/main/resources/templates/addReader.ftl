@@ -24,6 +24,8 @@
             background-attachment: fixed;
             background-color: #dab3ff;
             background-position: center;
+            background-image: url("https://media.istockphoto.com/photos/defocused-bookstore-background-shelves-with-books-picture-id509109438?k=20&m=509109438&s=612x612&w=0&h=htK64c45n6DIlkB8uCnLkACRs_r2RS71TBM0g4iumGE=");
+
         }
 
 
@@ -59,7 +61,7 @@
         }
 
         .container {
-            background-color: #ce99ff;
+            background-color: #f2f2f2;
             border-radius: 5px;
             padding: 20px;
             font-family: 'DynaPuff', cursive;
@@ -91,7 +93,7 @@
             text-align: center;
             /*float: center;*/
             margin-bottom: 30px;
-            background-color: #cccccc;
+            /*background-color: #cccccc;*/
             height: 60px;
 
 
@@ -115,7 +117,7 @@
         i {
             color: #330033;
             text-align: left;
-            background-color: #ce99ff;
+            /*background-color: #ce99ff;*/
         }
 
         .glyphicon {
