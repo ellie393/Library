@@ -13,125 +13,125 @@
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
 
-    <style>
-        body {
-            margin-left: 25%;
-            margin-top: 10px;
-            margin-right: 25%;
-            padding: 10px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-color: #dab3ff;
-            background-position: center;
-            background-image: url("https://media.istockphoto.com/photos/defocused-bookstore-background-shelves-with-books-picture-id509109438?k=20&m=509109438&s=612x612&w=0&h=htK64c45n6DIlkB8uCnLkACRs_r2RS71TBM0g4iumGE=");
-
-        }
-
-
-        * {
-            box-sizing: border-box;
-        }
-
-        input[type=text], select, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            resize: vertical;
-        }
-
-        label {
-            padding: 12px 12px 12px 0;
-            display: inline-block;
-        }
-
-        input[type=submit] {
-            background-color: #04AA6D;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            float: right;
-        }
-
-        input[type=submit]:hover {
-            background-color: #45a049;
-        }
-
-        .container {
-            background-color: #f2f2f2;
-            border-radius: 5px;
-            padding: 20px;
-            font-family: 'DynaPuff', cursive;
-            font-size: medium;
-        }
-
-        .col-25 {
-            float: right;
-            text-align: -moz-center;
-            width: 20%;
-            margin-top: 6px;
-            margin-left: 10px;
-        }
-
-        .col-75 {
-            float: left;
-            width: 75%;
-            margin-top: 6px;
-            font-family: 'DynaPuff', cursive;
-            font-size: medium;
-
-        }
-
-
-        h1 {
-            font-family: 'Gloria Hallelujah', cursive;
-            color: #660066;
-            font-size: 3em;
-            text-align: center;
-            /*float: center;*/
-            margin-bottom: 30px;
-            /*background-color: #cccccc;*/
-            height: 60px;
-
-
-        }
-
-        a {
-            width: 30%;
-            float: left;
-            margin-left: 3%;
-
-            /*size: 25px;*/
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        i {
-            color: #330033;
-            text-align: left;
-            /*background-color: #ce99ff;*/
-        }
-
-        .glyphicon {
-            margin-right: 3%;
-
-        }
-
-        .d-grid {
-            height: 30px;
-        }
-
-
-    </style>
 </head>
+<style>
+    body {
+        margin-left: 25%;
+        margin-top: 10px;
+        margin-right: 25%;
+        padding: 10px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-color: #dab3ff;
+        background-image: url("https://i.postimg.cc/sX0bLFhn/closeup-books-wellorganized-shelves-bookstore.jpg");
+        background-position: center;
+
+    }
+
+
+    * {
+        box-sizing: border-box;
+    }
+
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+    }
+
+    label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+    }
+
+    input[type=submit] {
+        background-color: #04AA6D;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    .container {
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        padding: 20px;
+        font-family: 'DynaPuff', cursive;
+        font-size: medium;
+    }
+
+    .col-25 {
+        float: right;
+        text-align: -moz-center;
+        width: 20%;
+        margin-top: 6px;
+        margin-left: 10px;
+    }
+
+    .col-75 {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+        font-family: 'DynaPuff', cursive;
+        font-size: medium;
+
+    }
+
+
+    h1 {
+        font-family: 'Gloria Hallelujah', cursive;
+        color: #660066;
+        font-size: 3em;
+        text-align: center;
+        /*float: center;*/
+        margin-bottom: 30px;
+        /*background-color: #cccccc;*/
+        height: 60px;
+
+
+    }
+
+    a {
+        width: 30%;
+        float: left;
+        margin-left: 3%;
+
+        /*size: 25px;*/
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    i {
+        color: #330033;
+        text-align: left;
+        /*background-color: #ce99ff;*/
+    }
+
+    .glyphicon {
+        margin-right: 3%;
+
+    }
+
+    .d-grid {
+        height: 30px;
+    }
+
+
+</style>
 
 <body>
 

@@ -15,7 +15,7 @@
         body {
             padding: 0;
             margin: 0;
-            background-image: url("https://img.freepik.com/free-photo/wooden-table-with-blurred-background_1134-14.jpg?w=1060&t=st=1661453386~exp=1661453986~hmac=6f74c4d406ec3ab2d210f570aff382e895cf666798fb26a55addce66f5a46568");
+            background-image: url("https://i.postimg.cc/ydQzzgwy/wooden-table-with-blurred-background.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;

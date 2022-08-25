@@ -28,8 +28,7 @@
             margin-top: 10px;
             padding: 10px;
 
-            background-image: url("https://img.freepik.com/free-photo/abstract-blur-defocused-bookshelf-library_1203-9639.jpg?w=1060&t=st=1661449353~exp=1661449953~hmac=9ddcdad0da2a270ea54e89c0f3db65e586f29b8c172c10862738f23afbee0fa6");
-
+            background-image: url("https://i.postimg.cc/YSBrXFH4/abstract-blur-defocused-bookshelf-library.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -66,7 +65,6 @@
         .title {
             opacity: 0.8;
             font-family: 'Aclonica', sans-serif;
-            /*color: #660066;*/
             font-size: 100px;
             text-align: center;
             margin-top: 3%;

@@ -24,8 +24,7 @@
             background-attachment: fixed;
             background-color: #dab3ff;
             background-position: center;
-            /*background-image: url("https://img.freepik.com/free-photo/book-library-with-open-textbook_1150-5921.jpg?w=1060&t=st=1661455607~exp=1661456207~hmac=f3fdf282c2eadd714abebba03e9b00df6882930da71a0eb3afffbefc38b7fa1f");*/
-        background-image: url("https://media.istockphoto.com/photos/defocused-bookstore-background-shelves-with-books-picture-id509109438?k=20&m=509109438&s=612x612&w=0&h=htK64c45n6DIlkB8uCnLkACRs_r2RS71TBM0g4iumGE=");
+            background-image: url("https://i.postimg.cc/sX0bLFhn/closeup-books-wellorganized-shelves-bookstore.jpg");
         }
 
 

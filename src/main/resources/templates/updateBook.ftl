@@ -24,7 +24,7 @@
             background-attachment: fixed;
             background-color: #dab3ff;
             background-position: center;
-            background-image: url("https://media.istockphoto.com/photos/defocused-bookstore-background-shelves-with-books-picture-id509109438?k=20&m=509109438&s=612x612&w=0&h=htK64c45n6DIlkB8uCnLkACRs_r2RS71TBM0g4iumGE=");
+            background-image: url("https://i.postimg.cc/sX0bLFhn/closeup-books-wellorganized-shelves-bookstore.jpg");
 
         }
 
