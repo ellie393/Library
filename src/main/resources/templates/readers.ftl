@@ -115,7 +115,7 @@
             <thead>
             <th> ID</th>
             <th> First name</th>
-            <th> Middle name</th>
+<#--            <th> Middle name</th>-->
             <th> Last name</th>
             <th> Type of discount</th>
             <th> Address</th>
@@ -126,7 +126,7 @@
                 <tr>
                     <td>${reader.readerID}</td>
                     <td>${reader.firstName}</td>
-                    <td>${reader.middleName}</td>
+<#--                    <td>${reader.middleName}</td>-->
                     <td>${reader.lastName}</td>
                     <td>${reader.readerTypes}</td>
                     <td>${reader.address}</td>

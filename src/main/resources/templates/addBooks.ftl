@@ -141,8 +141,8 @@
 
 <body>
 
-<#--<h1><span>Adding new Magic Book</span></h1>-->
-<h1>Adding new Magic Book</h1>
+<h1><span>Adding new Magic Book</span></h1>
+<#--<h1>Adding new Magic Book</h1>-->
 
 <div class="container">
     <form name="book" action="" method="POST">

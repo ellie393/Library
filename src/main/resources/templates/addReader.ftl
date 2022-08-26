@@ -127,14 +127,20 @@
         .d-grid {
             height: 30px;
         }
+        span {
+            background-color: #f2f2f2;
+            opacity: 0.8;
+            padding: 5px;
 
+            box-shadow: 0 0 3px 7px #f2f2f2;
+        }
 
     </style>
 </head>
 
 <body>
 
-<h1>Adding new Magic Reader</h1>
+<h1><span>Adding new Reader</span></h1>
 
 <div class="container">
     <form name="book" action="" method="POST">
@@ -147,14 +153,14 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-25">
-                <label for="lmname">Middle name</label>
-            </div>
-            <div class="col-75">
-                <@spring.formInput "form.middleName" "" "text"/>
-            </div>
-        </div>
+<#--        <div class="row">-->
+<#--            <div class="col-25">-->
+<#--                <label for="lmname">Middle name</label>-->
+<#--            </div>-->
+<#--            <div class="col-75">-->
+<#--                <@spring.formInput "form.middleName" "" "text"/>-->
+<#--            </div>-->
+<#--        </div>-->
 
         <div class="row">
             <div class="col-25">

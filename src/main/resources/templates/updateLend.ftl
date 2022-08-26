@@ -128,6 +128,13 @@
         .d-grid {
             height: 30px;
         }
+        span {
+            background-color: #f2f2f2;
+            opacity: 0.8;
+            padding: 5px;
+
+            box-shadow: 0 0 3px 7px #f2f2f2;
+        }
 
 
     </style>
@@ -135,7 +142,7 @@
 
 <body>
 
-<h1> Lend editing</h1>
+<h1><span>Lend editing</span></h1>
 
 <div class="container">
     <form name="lend" action="" method="POST">

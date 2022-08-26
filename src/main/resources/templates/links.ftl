@@ -384,7 +384,7 @@
             </li>
             <li>
                 <h2>18</h2>
-                <h3>VCS <br>GitHub </h3>
+                <h3>VCS <br>GitHub <br><br><br></h3>
             </li>
 
         </ul>
